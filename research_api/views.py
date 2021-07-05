@@ -8,29 +8,29 @@ class Found:
     Represents the appearance of a term in a given document, along with the
     frequency of appearances in the same one.
     """
-    def _init_(self, docId, frequency):
+    def __init__(self, docId, frequency):
         self.docId = docId
         self.frequency = frequency  
 
-    def _repr_(self):
+    def __repr__(self):
         """
         String representation of the Appearance object
         """
-        return str(self._dict_)
+        return str(self.__dict__)
 
 
 class Database:
     """
     In memory database representing the already indexed documents.
     """
-    def _init_(self):
+    def __init__(self):
         self.db = dict()
 
-    def _repr_(self):
+    def __repr__(self):
         """
         String representation of the Database object
         """
-        return str(self._dict_)
+        return str(self.__dict__)
 
     def get(self, id):
         return self.db.get(id, None)
@@ -52,11 +52,11 @@ class Invert:
     """
     Inverted Index class.
     """
-    def _init_(self, db):
+    def __init__(self, db):
         self.index = dict()
         self.db = db
 
-    def _repr_(self):
+    def __repr__(self):
         """
         String representation of the Database object
         """
@@ -124,7 +124,7 @@ def indexes(request):
 def indexing_document(request):
     global uid, index
     try:
-        docs = request.data['data']
+        docs = request.data.get('data')
         docs = docs.split('\n\n')
         print(docs)
         for par in docs:
