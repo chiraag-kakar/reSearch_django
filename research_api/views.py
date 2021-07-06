@@ -120,7 +120,7 @@ def indexes(request):
     return Response({"info": "All the indexes has been cleared."})
 
 
-@api_view(['GET', 'POST'])
+@api_view(['POST'])
 def indexing_document(request):
     global uid, index
     try:
@@ -139,10 +139,10 @@ def indexing_document(request):
     return Response({"status": 1})
 
 
-@api_view(['GET', 'POST'])
+@api_view(['POST'])
 def search(request):
     global index, db
-    result = index.lookup_query(request.data['word'].lower())
+    result = index.lookup_query(request.data.get("data").lower())
     print(result)
     for r in result:
         r.append(db.db[r[1]]['text'])
