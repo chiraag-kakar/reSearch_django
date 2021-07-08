@@ -58,7 +58,7 @@ https://restresearch.pythonanywhere.com/api/v1/clear/
 Response :
 ```
 {
-    "status": 1
+    "info": "All the indexes has been cleared."
 }
 ```
 
@@ -69,7 +69,12 @@ https://restresearch.pythonanywhere.com/api/v1/all/
 Response :
 ```
 {
-    "status": 1
+    "docs": [
+        [
+            0,
+            "hello world"
+        ]
+    ]
 }
 ```
 
