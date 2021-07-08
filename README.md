@@ -32,16 +32,24 @@ https://restresearch.pythonanywhere.com/api/v1/search/
 Content :
 ```
 {
-"data" : "hello world"
+"data" : "hello"
 }
 ```
 
 Response :
 ```
 {
-    "status": 1
+    "docs": [
+        [
+            1,
+            0,
+            "hello world"
+        ]
+    ]
 }
 ```
+
+` Note : 1 is the frequency and 0 is the id assigned to the document `
 
 https://restresearch.pythonanywhere.com/api/v1/clear/
 
