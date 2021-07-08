@@ -51,6 +51,9 @@ Response :
 
 ` Note : 1 is the frequency and 0 is the id assigned to the document `
 
+---
+
+
 * https://restresearch.pythonanywhere.com/api/v1/clear/
 
 ```HTTP Method : GET```
@@ -61,6 +64,8 @@ Response :
     "info": "All the indexes has been cleared."
 }
 ```
+
+---
 
 * https://restresearch.pythonanywhere.com/api/v1/all/
 
