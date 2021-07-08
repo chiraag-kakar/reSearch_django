@@ -25,7 +25,7 @@ Response :
 
 ---
 
-https://restresearch.pythonanywhere.com/api/v1/search/
+* https://restresearch.pythonanywhere.com/api/v1/search/
 
 ```HTTP Method : GET```
 
@@ -51,7 +51,7 @@ Response :
 
 ` Note : 1 is the frequency and 0 is the id assigned to the document `
 
-https://restresearch.pythonanywhere.com/api/v1/clear/
+* https://restresearch.pythonanywhere.com/api/v1/clear/
 
 ```HTTP Method : GET```
 
@@ -62,7 +62,7 @@ Response :
 }
 ```
 
-https://restresearch.pythonanywhere.com/api/v1/all/
+* https://restresearch.pythonanywhere.com/api/v1/all/
 
 ```HTTP Method : GET```
 
